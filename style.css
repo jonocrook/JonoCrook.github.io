@@ -1,0 +1,27 @@
+
+h1{
+    color:rgb(36, 33, 100);
+    font:icon; 
+    font-size:x-large
+}
+body {
+    background-color: blanchedalmond;
+}
+
+img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo{
+    width: 35%;
+    border-radius: 8px;
+}

@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mr Crook's Teaching Portfolio - Teaching Portfolio</title>
+    <link rel="stylesheet" href="starter.css";>
 </head>
 <body>
     <!--Heading Colour and Font-->
-    <h1 style="color:rgb(36, 33, 100);font:icon; font-size:x-large;">Project Showcase</h1>
+    <header>
+    <h1>Project Showcase</h1>
+    </header>
     <!--Navigation menu section-->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="teaching.html">Teaching Practice</a></li>
-        <li><a href="projects.html">Project Showcase</a></li>
-        <li><a href="worksample.html">Samples of Work</a></li>
-        <li><a href="contact.html">Contact Me</a></li>  
-    </ul>
-</nav>
+        <!-- Navigation menu section -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="teaching.html">Teaching Practice</a></li>
+                <li><a class="active" href="projects.html">Project Showcase</a></li>
+                <li><a href="worksamples.html">Samples of Work</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
 <!--Main content area for page-->
 <main>
     <!--Section focusing on showcasing my projects-->
-    <section>
+    <section class="section">
         <div class="flex-container">
             <div class="project-card">
                 <img src="images/Hacksaw.JPG" alt="Photo of hand made hacksaw in metalwork">
@@ -62,3 +68,11 @@
         </div>
     </section>
 </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jonathan Crook. All rights reserved.</p>
+            </div>
+    </footer>
+</body>
+</html>
