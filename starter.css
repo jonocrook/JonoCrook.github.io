@@ -255,7 +255,7 @@ tr:nth-child(even) {
   margin-bottom: 0.3em;     /* Space below heading */
 }
 .card p { 
-  color: var(--muted);      /* Muted text colour */
+  color: #707070;      /* Muted text colour */
   margin-bottom: 0.8em;     /* Space below paragraph */
 }
 .card a { display: block; }
