@@ -15,7 +15,18 @@
   body {
     background: url(images/LightTimberGrain.jpg) no-repeat center center fixed;
     background-size: cover;
+	 background-position: center;     /* keeps it centered */
+    background-repeat: no-repeat;    /* no tiling */
+    background-attachment: fixed;    /* makes it stay still when scrolling */
+
+    z-index: -1;                     /* ✅ keeps it BEHIND everything */
   }
+
+  /* Optional: darken the image slightly for contrast */
+  body {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
 </style>
 	</head>
 	<body class="is-preload">
@@ -38,14 +49,14 @@
 					</div>
 						<nav>
 							<ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="teaching.html">Teaching Practice</a></li>
-        <li><a href="projects.html">Project Showcase</a></li>
-        <li><a href="worksamples.html">Samples of Work</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="index.html" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Home</a></li>
+        <li><a href="about.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">About</a></li>
+        <li><a href="teaching.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Teaching Practice</a></li>
+        <li><a href="projects.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Project Showcase</a></li>
+        <li><a href="worksamples.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Samples of Work</a></li>
+        <li><a href="contact.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Contact Me</a></li>
+        <li><a href="resources.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Resources</a></li>
+        <li><a href="resume.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Resume</a></li>
 							</ul>
 						</nav>
 					</header>

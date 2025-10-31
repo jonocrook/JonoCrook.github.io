@@ -10,6 +10,24 @@
     background: url(images/LightTimberGrain.jpg) no-repeat center center fixed;
     background-size: cover;
   }
+
+      .content-box img {
+    display: block;           /* removes small gaps below images */
+    max-width: 100%;          /* keeps image inside the box width */
+    height: auto;             /* keeps proportions correct */
+    border-radius: 10px;      /* optional – rounds the corners */
+    margin: 0 auto 15px;      /* centers image, adds bottom space */
+    box-shadow: 0 0 10px rgba(0,0,0,0.4); /* optional subtle shadow */
+  }
+
+  /* optional: limit overall box width so images don’t blow up */
+  .content-box {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+  }
 </style>
 </head>
 <body>
@@ -17,8 +35,36 @@
   <div class="content-box">
     <a href="index.html" class="close-button" aria-label="Back to Home">×</a>
     <h1>Teaching Resources</h1>
-    <p>Access downloadable lesson plans, student checklists, and teaching aids designed to support learning in design and technology classrooms.</p>
+    <p>Access downloadable lesson plans, and teaching aids designed to support learning in design and technology classrooms.</p>
   </div>
+
+    <div class="content-box">
+<a href="docs/ExampleLessonPlan.pdf" target="_blank" rel="noopener">
+                            <img src="images/LessonPlanIcon.png" style="width: 100px;">
+                        </a>
+                        <div class="content">
+                            <h3>Stage 5 Design & Technology - Sample Lesson Plan</h3>
+                            <p>Lesson plan + descriptions: Critical Learning in Design, Student Adjustments, Outline of Learning Program</p>
+                            <p><em>Click Icon to Download</em></p>
+                        </div>
+                        </div>
+                      
+
+    <div class="content-box">
+<a href="docs/LessonOutline-Pinball.pdf" target="_blank" rel="noopener">
+                            <img src="images/LessonPlanIcon.png" style="width: 100px;">
+                        </a>
+                        <div class="content">
+                            <h3>Stage 4 Design & Technology - Sample Lesson Outline</h3>
+                            <p>Lesson Outline Example - Creation of a pinball machine made out of carboard </p>
+                            <p><em>Click Icon to Download</em></p>
+                </div> 
+                </div>
+                                    </article>
+
+  <footer style="background-color: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 10px; border-radius: 10px; width: fit-content; margin: 20px auto;">
+  <p>&copy; 2025 Jonathan Crook. All rights reserved.</p>
+</footer>
 
   <script src="assets/js/theme.js"></script>
 </body>
