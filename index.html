@@ -15,14 +15,14 @@
   body {
     background: url(images/LightTimberGrain.jpg) no-repeat center center fixed;
     background-size: cover;
-	 background-position: center;     /* keeps it centered */
-    background-repeat: no-repeat;    /* no tiling */
-    background-attachment: fixed;    /* makes it stay still when scrolling */
+	 background-position: center;     
+    background-repeat: no-repeat;   
+    background-attachment: fixed;    
 
-    z-index: -1;                     /* ✅ keeps it BEHIND everything */
+    z-index: -1;                   
   }
 
-  /* Optional: darken the image slightly for contrast */
+  
   body {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -49,7 +49,6 @@
 					</div>
 						<nav>
 							<ul>
-        <li><a href="index.html" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Home</a></li>
         <li><a href="about.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">About</a></li>
         <li><a href="teaching.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Teaching Practice</a></li>
         <li><a href="projects.html"style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none;">Project Showcase</a></li>
@@ -62,6 +61,19 @@
 					</header>
 
 
+<button id="bgToggleBtn" 
+style="padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background-color:rgba(0,0,0,0.6);
+color:white;
+font-size:16px;
+backdrop-filter: blur(4px);
+box-shadow:0 0 8px rgba(0,0,0,0.4);">
+  Change Background
+</button>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -69,6 +81,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+<script>
+  const backgrounds = [
+    'images/LightTimberGrain.jpg',
+    'images/DarkTimberGrain.jpg'
+  ];
+
+  let currentIndex = localStorage.getItem('bgIndex') ? parseInt(localStorage.getItem('bgIndex')) : 0;
+
+  document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.transition = 'background-image 0.5s ease-in-out';
+
+  // Change background when button is clicked
+  document.getElementById('bgToggleBtn').addEventListener('click', function() {
+    // Switch between (light) and (dark)
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+
+    // Save new background index for all pages
+    localStorage.setItem('bgIndex', currentIndex);
+
+    // Apply the new background
+    document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+  });
+</script>
 
 	</body>
 </html>

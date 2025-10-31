@@ -20,7 +20,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.4); /* optional subtle shadow */
   }
 
-  /* optional: limit overall box width so images don’t blow up */
+  /* limit overall box width so images don’t blow up */
   .content-box {
     max-width: 800px;
     margin: 40px auto;
@@ -80,6 +80,50 @@
   <p>&copy; 2025 Jonathan Crook. All rights reserved.</p>
 </footer>
 
+<button id="bgToggleBtn" 
+style="padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background-color:rgba(0,0,0,0.6);
+color:white;
+font-size:16px;
+backdrop-filter: blur(4px);
+box-shadow:0 0 8px rgba(0,0,0,0.4);">
+  Change Background
+</button>
+
+
   <script src="assets/js/theme.js"></script>
+<script>
+  // Background image 
+  const backgrounds = [
+    'images/LightTimberGrain.jpg',
+    'images/DarkTimberGrain.jpg'
+  ];
+
+  // Load saved background choice
+  let currentIndex = localStorage.getItem('bgIndex') ? parseInt(localStorage.getItem('bgIndex')) : 0;
+
+  // Apply that background immediately when page loads
+  document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.transition = 'background-image 0.5s ease-in-out';
+
+  // Change background when button is clicked
+  document.getElementById('bgToggleBtn').addEventListener('click', function() {
+    // Switch between 0 (light) and 1 (dark)
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+
+    // Save new background index for all pages
+    localStorage.setItem('bgIndex', currentIndex);
+
+    // Apply the new background
+    document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+  });
+</script>
+  
 </body>
 </html>
